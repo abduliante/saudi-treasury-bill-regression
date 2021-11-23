@@ -13,7 +13,15 @@ Since T-Bills are considered safe securities, our model; as a result, would help
 ## Data Description
 Our data will be scraped from [Saudi Central Bank](https://www.sama.gov.sa/en-US/FinExc/Pages/default.aspx) website using BeautifulSoup4 tool. The data spans from 2009 to 2021. There are approximately 144 rows and 6 columns.
 
-< ADD DATA TABLE >
+
+| Feature | Description |
+| -   | - |
+| date | identifies the date of each row |
+| repo_rate | repersent the repurchase agreement rate for a specific period |
+| money_supply_rate | money supply growth rate (of total volume of money held by the public) for specific period |
+| inflation_rate | indicates the inflation rate for a specific period |
+| TARGET | maturity term for a T-bill which is 52nd week (1 year) for a specific period |
+
 
 ## Tools:
 The prediction is going to be delivered on an IPython Notebook. Tools to be used are:
