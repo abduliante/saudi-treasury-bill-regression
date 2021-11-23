@@ -20,7 +20,7 @@ Our data will be scraped from [Saudi Central Bank](https://www.sama.gov.sa/en-US
 | repo_rate | repersent the repurchase agreement rate for a specific period |
 | money_supply_rate | money supply growth rate (of total volume of money held by the public) for specific period |
 | inflation_rate | indicates the inflation rate for a specific period |
-| TARGET | maturity term for a T-bill which is 52nd week (1 year) for a specific period |
+| maturity_term | maturity term for a T-bill which is 52nd week (1 year) for a specific period |
 
 
 ## Tools:
