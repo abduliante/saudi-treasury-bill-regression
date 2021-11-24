@@ -8,7 +8,7 @@ This project aims to predict treasury bill yields. The data has been obtained fr
 
 ## Research Hypothesis:
 In our project, we try to hypothesize if inflation and money supply rates influence treasury bill returns. Verifying the hypothesis would help us create a model that predict treasury yields.
-Since T-Bills are considered safe securities, our model; as a result, would help future investors to confidently choose the right time to invest in these securities.
+Since T-Bills are considered safe securities, our model; as a result, would help future investors to confidently choose the right time to invest in these short-term securities.
 
 ## Data Description
 Our data will be scraped from [Saudi Central Bank](https://www.sama.gov.sa/en-US/FinExc/Pages/default.aspx) website using BeautifulSoup4 tool. The data spans from 2009 to 2021. There are approximately 144 rows and 5 columns.
