@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 import time
 
-# intialize driver
+# initialize driver
 driver = webdriver.Chrome('/usr/bin/chromedriver')
 driver.get('https://www.sama.gov.sa/en-US/Repo/pages/OfficialRepoRate.aspx?&&p_SAMAPublishDate=20060131%2021%3a00%3a00&&PageFirstRow=1&View=7aa67fe6-8409-4caa-b769-4094aae0daa5')
 
@@ -13,7 +13,7 @@ rchange = []
 
 
 # handle page navigation and append items
-for i in range(1,4):
+for i in range(1,100):
     
     j = 0
     driver.get(driver.current_url)
@@ -42,7 +42,8 @@ for i in range(1,4):
 
     time.sleep(2)
 
-len(rchange) == len(rrate) == len(rdate)
+# check integrity:
+print(len(rchange) == len(rrate) == len(rdate))
 
 # close driver
 driver.close()

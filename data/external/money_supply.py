@@ -11,7 +11,7 @@ driver.get("https://www.sama.gov.sa/en-US/Indices/Pages/MoneySupply.aspx")
 mdates = []
 mrates = []
 
-for i in range(1,12):
+for i in range(1,100):
     j = 0
     
     driver.get(driver.current_url)
