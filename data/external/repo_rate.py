@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import time
+import csv
 
 # initialize driver
 driver = webdriver.Chrome('/usr/bin/chromedriver')
@@ -47,3 +48,12 @@ print(len(rchange) == len(rrate) == len(rdate))
 
 # close driver
 driver.close()
+
+# export csv
+with open('repo_rate.csv', 'a') as f:
+    writer = csv.writer(f)
+    header = ['repo_date', 'repo_rate', 'repo_change']
+    writer.writerow(header)
+    for i in range(len(rdate)):
+        row = [rdate[i], rrate[i], rchange[i]]
+        writer.writerow(row)

@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import time
+import csv 
 
 
 driver = webdriver.Chrome('/usr/bin/chromedriver')
@@ -34,4 +35,14 @@ for i in range(1,100):
     time.sleep(2)
 driver.close() 
 
+# verify integrity
 print(len(mdates) == len(mrates))
+
+# export csv
+with open('money_supply.csv', 'a') as f:
+    writer = csv.writer(f)
+    header = ['money date', 'money rate']
+    writer.writerow(header)
+    for i in range(len(mdates)):
+        row = [mdates[i], mrates[i]]
+        writer.writerow(row)
