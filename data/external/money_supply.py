@@ -4,14 +4,16 @@ import time
 import csv 
 
 
+# initalize driver
 driver = webdriver.Chrome('/usr/bin/chromedriver')
 driver.get("https://www.sama.gov.sa/en-US/Indices/Pages/MoneySupply.aspx")
 
 
-# handle page navigation
+# containers
 mdates = []
 mrates = []
 
+# handle page navigation append items
 for i in range(1,100):
     j = 0
     
@@ -33,6 +35,8 @@ for i in range(1,100):
         next_page[0].click()
 
     time.sleep(2)
+
+# close driver
 driver.close() 
 
 # verify integrity
@@ -41,7 +45,7 @@ print(len(mdates) == len(mrates))
 # export csv
 with open('money_supply.csv', 'a') as f:
     writer = csv.writer(f)
-    header = ['money date', 'money rate']
+    header = ['money_date', 'money_rate']
     writer.writerow(header)
     for i in range(len(mdates)):
         row = [mdates[i], mrates[i]]
