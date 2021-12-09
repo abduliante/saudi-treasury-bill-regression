@@ -11,7 +11,7 @@ In our project, we try to hypothesize if inflation and money supply rates influe
 Since T-Bills are considered safe securities, our model; as a result, would help future investors to confidently choose the right time to invest in these short-term securities.
 
 ## Data Description
-Our data will be scraped from [Saudi Central Bank](https://www.sama.gov.sa/en-US/FinExc/Pages/default.aspx) website using BeautifulSoup4 tool. The data spans from 2009 to 2021. There are approximately 144 rows and 5 columns.
+Our data will be scraped from [Saudi Central Bank](https://www.sama.gov.sa/en-US/FinExc/Pages/default.aspx) website using BeautifulSoup4 tool. The data spans from 2010 to 2021. There are approximately 4000+ rows and 7 columns.
 
 
 | Feature | Description |
@@ -20,13 +20,14 @@ Our data will be scraped from [Saudi Central Bank](https://www.sama.gov.sa/en-US
 | repo_rate | repersent the repurchase agreement rate for a specific period |
 | money_supply_rate | money supply growth rate (of total volume of money held by the public) for specific period |
 | inflation_rate | indicates the inflation rate for a specific period |
-| maturity_term | maturity term for a T-bill which is 52nd week (1 year) for a specific period |
+| maturity_term | maturity term for a T-bill (5 columns) |
 
 
 ## Tools:
 The prediction is going to be delivered on an IPython Notebook. Tools to be used are:
 * Python 3.7
 * BeautifulSoup4 -- Data scraping
+* Selenium
 * Pandas
 * Numpy
 * Scikit-learn
